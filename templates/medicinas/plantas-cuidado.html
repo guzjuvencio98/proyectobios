@@ -1,0 +1,22 @@
+<title>Cuidados de plantas de Cannabis | CannabisSTORE</title>
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+
+{% block header %}
+<h1>Como criar nuestras plantas</h1>
+{% endblock %}
+{% block content %}
+
+	{% for a in cuidado %}
+	<p>
+		<h3>{{a.nombrep}}</h3>
+		<p><i>Método:{{a.metodo}}</i></p>
+		<p><i>Ambiente más favorable: {{a.ambiente}}</i></p>
+		<p><i>Productos para cuidarla: {{a.productos}}</i></p>
+		<img height="289" width="400" src="{% static 'img/cannabishoja.jpg' %}">
+	</p>
+	{% endfor %}
+
+{% endblock %}

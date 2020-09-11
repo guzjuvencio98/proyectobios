@@ -1,0 +1,15 @@
+<title>Registrarse | CannabisSTORE</title>
+
+{% extends 'base/base.html' %}
+
+{% block header %} Registrar usuario Nuevo en CannabisSTORE! {% endblock %}
+
+{% block content %}
+
+	<h5>Complete:</h5>
+	<form id="formulario" method="post" action=""> {% csrf_token %}
+	<table>{{formulario}}</table>
+	<p><input type="submit" value="Registrar"></p>
+</form>
+
+{% endblock %}

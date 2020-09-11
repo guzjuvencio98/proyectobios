@@ -1,0 +1,14 @@
+<title>Ingreso al sistema</title>
+{% extends 'base/base.html' %}
+
+
+{% block header %}<h2>Ingresa</h2>{% endblock %}
+
+{% block content %} 
+<form id="formulario" method="post" action="">{% csrf_token %}
+<table>{{formulario}}</table>
+<p><input type="submit" value="Ingresar"></p>
+	
+
+</form>
+{% endblock %}

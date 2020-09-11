@@ -1,0 +1,22 @@
+<title>Contacto | CannabisSTORE</title>
+
+{% extends 'base/base.html' %}
+
+{% block header %}
+Contactanos:
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="{% url 'contacto' %}">
+	{% csrf_token %}
+	<textarea name="Mensaje" placeholder="Envianos tu mensaje..."  ></textarea>
+	<p>
+	<input type="submit" />
+	</p>
+</form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

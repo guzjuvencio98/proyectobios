@@ -1,0 +1,22 @@
+<title>Aceite Cannabis | CannabisSTORE</title>
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+<h1>Los aceites que ofrecemos en CannabisSTORE!</h1>
+{% endblock %}
+
+{% block content %}
+	<p><img height="289" width="400" src="{% static 'img/aceitecannabis.jpg' %}"></p>
+	{% for a in aceites %}
+	<p>
+		<h3><p><i>Nombre:{{a.nombre}}</i></p></h3>
+		<p><i>Breve reseña:{{a.resena}}</i></p>
+		<p><i>Modo de uso:{{a.mdu}}</i></p>
+		<p><i>Precio:{{a.Precio}}</i></p>
+		<p><i>Efectos secundarios:{{a.ES}}</i></p>
+		<p></p>
+	</p>
+	{% endfor %}
+
+{% endblock %}

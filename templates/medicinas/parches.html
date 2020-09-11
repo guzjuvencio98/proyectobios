@@ -1,0 +1,26 @@
+<title>Parches de Cannabis | CannabisSTORE</title>
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+
+{% block header %}
+<h1>Los parches que ofrecemos en CannabisSTORE!</h1>
+{% endblock %}
+{% block content %}
+	<img height="289" width="400" src="{% static 'img/parchecannabis.jpg' %}">
+	{% for a in parches %}
+
+	<p>
+		<h3>{{a.nombre}}</h3>
+		<p><i>Breve reseña:{{a.resena}}</i></p>
+		<p><i>Modo de uso:{{a.mdu}}</i></p>
+		<p><i>Precio: {{a.Precio}}</i></p>
+		<p><i>Efectos secundarios:{{a.ES}}</i></p>
+		<p><i>Importa:{{a.Importador}}</i></p>
+		
+	</p>
+	{% endfor %}
+
+{% endblock %}
+

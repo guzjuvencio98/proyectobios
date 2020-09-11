@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+
+{% block header %}<h2>Resultados</h2>{% endblock %}
+{% block content %}
+{% if aceitesBusq %}
+	<p>Aceites encontrados: {{ aceitesBusq|length }} AceitesCannabis{{aceitesBusq|pluralize}}.</p>
+	<ul>
+		{% for AceitesCannabis in AceitesCannabis %}
+			<p>{{ aceites.nombre }}</p>
+			<p>{{ aceites.resena}}</p>
+		{% endfor %}
+	</ul>
+
+	
+{% else %}
+	<p>Ningún aceite coincide con la búsqueda</p>
+
+{% endif %}
+
+{% endblock %}

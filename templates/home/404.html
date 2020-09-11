@@ -1,0 +1,9 @@
+<title>404</title>
+{% extends base/base.html %}
+{% load static %}
+
+
+{% block header %}Error{% endblock %}
+{% block contents %} No se encuentra la URL
+ <img src="{% static 'img/404.png' %}">
+{% endblock %}

@@ -1,0 +1,22 @@
+<title>Cremas Cannabis | CannabisSTORE</title>
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header %}
+<h1>Las cremas que ofrecemos en CannabisSTORE!</h1>
+{% endblock %}
+
+{% block content %}
+	<p><img height="289" width="400" src="{% static 'img/cremacannabis.jpg' %}"></p>
+	{% for a in cremas %}
+	<p>
+		<h3></h3>
+		<p><i>Breve reseña:{{a.resena}}</i></p>
+		<p><i>Modo de uso:{{a.mdu}}</i></p>
+		<p><i>Precio:{{a.Precio}}</i></p>
+		<p><i>Efectos secundarios:{{a.ES}}</i></p>
+		<p></p>
+	</p>
+	{% endfor %}
+
+{% endblock %}
